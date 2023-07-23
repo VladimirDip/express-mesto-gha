@@ -1,0 +1,50 @@
+{
+  "name": "express-mesto-gha",
+  "version": "1.0.0",
+  "description": "mesto project backend (express node.js)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "npx eslint .",
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "lint:fix": "npm run lint -- --fix",
+    "prettier": "npx prettier src test --check",
+    "prettier:fix": "npm run prettier -- --write",
+    "format": "npm run prettier:fix && npm run lint:fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VladimirDip/express-mesto-gha.git"
+  },
+  "author": "Vladimir Dip",
+  "bugs": {
+    "url": "https://github.com/VladimirDip/express-mesto-gha/issues"
+  },
+  "homepage": "https://github.com/VladimirDip/express-mesto-gha#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^8.2.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "nodemon": "^3.0.1",
+    "prettier": "3.0.0",
+    "stylelint-config-prettier": "^9.0.5"
+  },
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "celebrate": "^15.0.1",
+    "cookie-parser": "^1.4.6",
+    "express": "^4.18.1",
+    "helmet": "^5.1.1",
+    "jsonwebtoken": "^9.0.1",
+    "mongoose": "^6.5.1",
+    "validator": "^13.7.0"
+  }
+}
