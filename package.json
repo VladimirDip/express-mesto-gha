@@ -38,12 +38,7 @@
     "stylelint-config-prettier": "^9.0.5"
   },
   "dependencies": {
-    "bcrypt": "^5.0.1",
-    "celebrate": "^15.0.1",
-    "cookie-parser": "^1.4.6",
     "express": "^4.18.1",
-    "helmet": "^5.1.1",
-    "jsonwebtoken": "^9.0.1",
     "mongoose": "^6.5.1",
     "validator": "^13.7.0"
   }

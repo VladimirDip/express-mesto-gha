@@ -8,9 +8,7 @@ const app = express();
 
 const { PORT = 3000 } = process.env;
 
-mongoose
-  .connect('mongodb://127.0.0.1:27017/mestodb')
-  .then(() => console.log('Db Connected'));
+mongoose.connect('mongodb://127.0.0.1:27017/mestodb');
 
 app.use((req, res, next) => {
   req.user = {
