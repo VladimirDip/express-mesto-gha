@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 const express = require('express');
+const helmet = require('helmet');
 const userRouter = require('./routes/users');
 const cardRouter = require('./routes/cards');
 const STATUS_CODE = require('./errors/errorCodes');
@@ -26,5 +27,5 @@ app.use('*', (req, res) => {
     message: 'Страница не найдена',
   });
 });
-
+app.use(helmet());
 app.listen(PORT);
