@@ -5,6 +5,8 @@ const NotFound = require('../errors/notFoundErrors');
 const Conflicted = require('../errors/confictErrors');
 const BadRequest = require('../errors/badRequestErrors');
 
+const { JWT_KEY = 'my-secret-key' } = process.env;
+
 const createUser = (req, res, next) => {
   bcrypt.hash(req.body.password, 10)
     .then((hash) => User.create({
@@ -41,7 +43,7 @@ const login = (req, res, next) => {
     .then((user) => {
       const token = jwt.sign(
         { _id: user._id },
-        'my-secret-key',
+        JWT_KEY,
         { expiresIn: '7d' },
       );
       res
